@@ -2,12 +2,21 @@ function NewsItem(props: any){
     const item = props.item;
   return (
     <div className="border rounded-full m-1">
-        <div className="bg-white p-4 rounded shadow text-center">
-      <a href={item.url} rel="noopener noreferrer" className="text-xl font-semibold text-blue-700 hover:underline">
-        {item.headline}
-      </a>
-      <p className="text-sm text-gray-600">{item.date}</p>
-    </div>
+        <div className="bg-white p-4 rounded shadow text-center scrollbar-hide">
+          <div className="grid grid-flow-col">
+            <a href={item.url} rel="noopener noreferrer" className="text-xl font-semibold hover:underline">
+            {item.headline}
+            </a>
+          </div>
+          <div className="grid grid-flow-col grid-rows">
+            <div className="text-blue-950">
+              {item.pubDate}
+            </div>
+            <div className="text-cyan-800">
+              {item.author}
+            </div>
+          </div>
+        </div>
     </div>
   );
 };
@@ -15,25 +24,3 @@ function NewsItem(props: any){
 export default NewsItem;
 
 
-
-// function NewsItem(props: any) {
-//   const item = props.item;
-
-//   return (
-//     <div className="fixed top-0 left-0 w-full h-screen overflow-y-auto bg-white z-50">
-//       <div className="p-4 max-w-md mx-auto mt-10 bg-white rounded shadow text-center">
-//         <a
-//           href={item.url}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className="text-xl font-semibold text-blue-700 hover:underline block"
-//         >
-//           {item.headline}
-//         </a>
-//         <p className="text-sm text-gray-600 mt-2">{item.date}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default NewsItem;

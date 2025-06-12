@@ -13,7 +13,7 @@ const newsURL = [
   {
     name: 'CNN Philippines',
     url: 'https://edition.cnn.com/world/asia',
-    baseUrl: 'https://www.cnnphilippines.com',
+    baseUrl: 'https://www.cnnphilippines.com/',
     selectors: {
       headlines: 'h2.news-title',
       link: 'a.news-link', // Extract href
